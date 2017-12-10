@@ -33,22 +33,33 @@ class NetworkOperationManager: NSObject {
     let pendingOperations = PendingOperations()
    
     func downloadData()->Void{
-        
         downloader.getJSONData(pageNumber: 1, pageSize: 30, completion: { (dict) in
-            //[weak self].p
             self.products = Utility.parseJSON(dict: dict)
             
             for (index, element) in self.products.enumerated(){
                 self.startDownloadProductImage(product: element, index: index )
-                
             }
-        }) { (response, error) in
-            //
+        }) { (response, error) in   //
             NSLog(error as! String)
         }
-        
     }
  
+    
+    func downloadData( pageNumber: Int,pageSize: Int,  completion: @escaping ([Product]? ) -> Void )->Void{
+        downloader.getJSONData(pageNumber: pageNumber, pageSize: pageSize, completion: { (dict) in
+            
+            let productList = Utility.parseJSON(dict: dict)
+            self.products.append(contentsOf:productList  )// = Utility.parseJSON(dict: dict)
+            
+            completion(productList)
+            
+            for (index, element) in self.products.enumerated(){
+                self.startDownloadProductImage(product: element, index: index )
+            }
+        }) { (response, error) in   //
+            NSLog(error as! String)
+        }
+    }
     func startOperationsProduct(product: Product, index: Int){
         switch (product.isImageDownloaded) {
         case .New:

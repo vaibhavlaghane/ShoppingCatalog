@@ -13,9 +13,12 @@
 		6487F3C41FDCC6DA000ED35E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3C31FDCC6DA000ED35E /* Product.swift */; };
 		6487F3C61FDCD63A000ED35E /* DataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3C51FDCD63A000ED35E /* DataDownloader.swift */; };
 		6487F3C91FDCDA59000ED35E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3C81FDCDA59000ED35E /* Utility.swift */; };
+		6487F3CC1FDDBF17000ED35E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6487F3CA1FDDBF17000ED35E /* Main.storyboard */; };
+		6487F3D01FDDC1FC000ED35E /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3CF1FDDC1FC000ED35E /* CatalogTableViewController.swift */; };
+		6487F3D21FDDC92A000ED35E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3D11FDDC92A000ED35E /* ProductCell.swift */; };
 		DC7888061FDC6B01009E4719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7888051FDC6B01009E4719 /* AppDelegate.swift */; };
 		DC7888081FDC6B01009E4719 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7888071FDC6B01009E4719 /* ViewController.swift */; };
-		DC78880B1FDC6B01009E4719 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7888091FDC6B01009E4719 /* Main.storyboard */; };
+		DC78880B1FDC6B01009E4719 /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7888091FDC6B01009E4719 /* Main2.storyboard */; };
 		DC78880E1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC78880C1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodeld */; };
 		DC7888101FDC6B01009E4719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC78880F1FDC6B01009E4719 /* Assets.xcassets */; };
 		DC7888131FDC6B01009E4719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7888111FDC6B01009E4719 /* LaunchScreen.storyboard */; };
@@ -47,10 +50,13 @@
 		6487F3C31FDCC6DA000ED35E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		6487F3C51FDCD63A000ED35E /* DataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDownloader.swift; sourceTree = "<group>"; };
 		6487F3C81FDCDA59000ED35E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		6487F3CB1FDDBF17000ED35E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6487F3CF1FDDC1FC000ED35E /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
+		6487F3D11FDDC92A000ED35E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		DC7888021FDC6B01009E4719 /* ShoppingCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7888051FDC6B01009E4719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC7888071FDC6B01009E4719 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC78880A1FDC6B01009E4719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC78880A1FDC6B01009E4719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
 		DC78880D1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingCatalog.xcdatamodel; sourceTree = "<group>"; };
 		DC78880F1FDC6B01009E4719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC7888121FDC6B01009E4719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,18 +115,38 @@
 		6487F3C71FDCDA4A000ED35E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				6487F3BA1FDCB9D7000ED35E /* ConstantsGlobal.swift */,
 				6487F3C81FDCDA59000ED35E /* Utility.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		6487F3CD1FDDC108000ED35E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC78880C1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodeld */,
+				6487F3CA1FDDBF17000ED35E /* Main.storyboard */,
+				DC7888091FDC6B01009E4719 /* Main2.storyboard */,
+				DC78880F1FDC6B01009E4719 /* Assets.xcassets */,
+				DC7888111FDC6B01009E4719 /* LaunchScreen.storyboard */,
+				DC7888141FDC6B01009E4719 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6487F3CE1FDDC1AB000ED35E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC7888071FDC6B01009E4719 /* ViewController.swift */,
+				6487F3CF1FDDC1FC000ED35E /* CatalogTableViewController.swift */,
+				6487F3D11FDDC92A000ED35E /* ProductCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DC7887F91FDC6B01009E4719 = {
 			isa = PBXGroup;
 			children = (
-				6487F3C71FDCDA4A000ED35E /* Utility */,
-				6487F3C21FDCC6B0000ED35E /* Model */,
-				6487F3BA1FDCB9D7000ED35E /* ConstantsGlobal.swift */,
-				6487F3B71FDCB99E000ED35E /* Network */,
 				DC7888041FDC6B01009E4719 /* ShoppingCatalog */,
 				DC78881C1FDC6B01009E4719 /* ShoppingCatalogTests */,
 				DC7888271FDC6B01009E4719 /* ShoppingCatalogUITests */,
@@ -142,12 +168,11 @@
 			isa = PBXGroup;
 			children = (
 				DC7888051FDC6B01009E4719 /* AppDelegate.swift */,
-				DC7888071FDC6B01009E4719 /* ViewController.swift */,
-				DC7888091FDC6B01009E4719 /* Main.storyboard */,
-				DC78880F1FDC6B01009E4719 /* Assets.xcassets */,
-				DC7888111FDC6B01009E4719 /* LaunchScreen.storyboard */,
-				DC7888141FDC6B01009E4719 /* Info.plist */,
-				DC78880C1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodeld */,
+				6487F3CE1FDDC1AB000ED35E /* View */,
+				6487F3CD1FDDC108000ED35E /* Resources */,
+				6487F3C71FDCDA4A000ED35E /* Utility */,
+				6487F3C21FDCC6B0000ED35E /* Model */,
+				6487F3B71FDCB99E000ED35E /* Network */,
 			);
 			path = ShoppingCatalog;
 			sourceTree = "<group>";
@@ -279,7 +304,8 @@
 			files = (
 				DC7888131FDC6B01009E4719 /* LaunchScreen.storyboard in Resources */,
 				DC7888101FDC6B01009E4719 /* Assets.xcassets in Resources */,
-				DC78880B1FDC6B01009E4719 /* Main.storyboard in Resources */,
+				DC78880B1FDC6B01009E4719 /* Main2.storyboard in Resources */,
+				6487F3CC1FDDBF17000ED35E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6487F3D01FDDC1FC000ED35E /* CatalogTableViewController.swift in Sources */,
+				6487F3D21FDDC92A000ED35E /* ProductCell.swift in Sources */,
 				6487F3C61FDCD63A000ED35E /* DataDownloader.swift in Sources */,
 				6487F3BF1FDCC1AF000ED35E /* NetworkOperationManager.swift in Sources */,
 				6487F3C91FDCDA59000ED35E /* Utility.swift in Sources */,
@@ -348,12 +376,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DC7888091FDC6B01009E4719 /* Main.storyboard */ = {
+		6487F3CA1FDDBF17000ED35E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6487F3CB1FDDBF17000ED35E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC7888091FDC6B01009E4719 /* Main2.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DC78880A1FDC6B01009E4719 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main2.storyboard;
 			sourceTree = "<group>";
 		};
 		DC7888111FDC6B01009E4719 /* LaunchScreen.storyboard */ = {
@@ -479,7 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ShoppingCatalog/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShoppingCatalog/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Com.SClub.ShoppingCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ShoppingCatalog/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShoppingCatalog/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Com.SClub.ShoppingCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";

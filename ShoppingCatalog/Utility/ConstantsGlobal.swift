@@ -8,5 +8,7 @@
 
 import UIKit
 
+let kCatalogCellIdentifier = "kCatalogCell"
+
 class ConstantsGlobal: NSObject {
 }

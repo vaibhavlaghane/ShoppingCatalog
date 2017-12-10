@@ -30,6 +30,7 @@ class Utility: NSObject {
         var products = [Product]()
         
         for (_,element) in prodArr.enumerated(){
+            
             if  let prd = element as? Dictionary< String, Any>{
 
                 let productID = prd["productId"] ?? ""
