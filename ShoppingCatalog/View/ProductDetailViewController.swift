@@ -9,36 +9,84 @@
 import UIKit
 
 class ProductDetailViewController: UIViewController {
-
+    @IBOutlet var viewPortrait: UIView!
+    @IBOutlet var viewLandscape: UIView!
+    
+    
     @IBOutlet var leftGestureRecognizer: UISwipeGestureRecognizer!
     @IBOutlet var rightSwipeGestureRecognizer: UISwipeGestureRecognizer!
     @IBOutlet weak var longDescriptionTxtView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var shortDescriptionTxtView: UITextView!
-    
     @IBOutlet weak var productLabel: UILabel!
     
+    var selfView : UIView?
     var productsList = [Product]()
     var product :Product? = nil
+    var currentProduct: Product? = nil
     var lastProduct : Product? = nil
     var nextProductInLine : Product? = nil
-    
-    
-    
+   
     
     @IBAction func swipeLeftCalled(_ sender: Any) {
         print("swipeLeftCalled")
+        
+        let bundle = Bundle.main
+        let vc = ProductChildViewController(nibName: kProductChildViewControllerNibName, bundle: nil )
+        if  let currentIndex = productsList.index(of: currentProduct!){
+            if currentIndex + 1 < productsList.count{
+                nextProductInLine = productsList[ currentIndex + 1]
+                vc.product = nextProductInLine//productsList[ currentIndex + 1]\
+                currentProduct = nextProductInLine
+                
+            }
+        }
+        
+        let transition = CATransition()
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromRight
+        self.view.layer.add(transition, forKey: nil)
+        self.view.addSubview(vc.view)
+        
     }
     
     @IBAction func swipeRightCalled(_ sender: Any) {
+        let view = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        view.backgroundColor = UIColor.red
+        
+        let vc = ProductChildViewController(nibName: kProductChildViewControllerNibName, bundle: nil )
+        if  let currentIndex = productsList.index(of: currentProduct!){
+            if currentIndex > 0{
+                nextProductInLine = productsList[ currentIndex - 1 ]
+                vc.product = nextProductInLine//productsList[ currentIndex - 1 ]
+                currentProduct = nextProductInLine
+                
+            }
+        }
+        
+        let transition = CATransition()
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromLeft
+        self.view.layer.add(transition, forKey: nil)
+        self.view.addSubview(vc.view)
+        
         print("swipeRightCalled")
     }
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
+        // create an NSData object from myView
+        let archive = NSKeyedArchiver.archivedData(withRootObject: selfView ?? UIView() )
+        // create a clone by unarchiving the NSData
+        let selfViewCopy = NSKeyedUnarchiver.unarchiveObject(with: archive) as! UIView
+        
         if let prd = product {
+            currentProduct = prd
+            
         self.shortDescriptionTxtView.attributedText =  Utility.descriptionHTMLConversion(htmlString:  (prd.shortDescription)! )
         self.longDescriptionTxtView.attributedText = Utility.descriptionHTMLConversion(htmlString: (prd.longDescription)! )
             

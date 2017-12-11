@@ -10,6 +10,9 @@ import UIKit
 
 let kCatalogCellIdentifier = "kCatalogCell"
 let kshowProductDetailsdentifier = "showProductDetails"
+let kproductDetailViewControllerIdentifier = "productDetailViewControllerID"
+let kProductChildViewControllerNibName = "ProductChildViewController"
+
 
  
 class ConstantsGlobal: NSObject {

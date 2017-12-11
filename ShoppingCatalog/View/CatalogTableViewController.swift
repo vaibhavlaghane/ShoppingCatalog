@@ -31,7 +31,7 @@ class CatalogTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.estimatedRowHeight =   UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 200.0;
+        self.tableView.estimatedRowHeight = 55.0;
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,10 +58,10 @@ class CatalogTableViewController: UITableViewController {
         // Configure the cell...
             if (indexPath.row < catalogList.count){
                 let prd = catalogList[indexPath.row]
-                cell.priceLabel.text = prd.price
+               // cell.priceLabel.text = prd.price
                 cell.productNameLabel.text = prd.productName
                 //cell.shortDescriptionTxt.text  = prd.shortDescription
-                cell.descriptionHTMLConversion(htmlString: prd.shortDescription ?? "")
+                //cell.descriptionHTMLConversion(htmlString: prd.shortDescription ?? "")
             }
         return cell
             
@@ -85,6 +85,7 @@ class CatalogTableViewController: UITableViewController {
             let destViewController                  =   segue.destination as! ProductDetailViewController
             let indexPath = sender as? IndexPath
             destViewController.product           =   catalogList[(indexPath?.row)!]
+            destViewController.productsList = catalogList
 //            destViewController.projectName          =   projectName //  "Mobile
         }
     }
