@@ -10,6 +10,23 @@ import UIKit
 
 class Utility: NSObject {
 
+    
+   /// function to process html string
+   ///
+   /// - Parameter htmlString: html inpit
+   /// - Returns: attributed string
+   static func descriptionHTMLConversion(htmlString: String )-> NSAttributedString{
+        
+        let theString = htmlString
+        let attrString = try! NSAttributedString(data: theString.data(using: String.Encoding.utf8,allowLossyConversion: false)!,
+                                                 options: [ .documentType: NSAttributedString.DocumentType.html,
+                                                            .characterEncoding: String.Encoding.utf8.rawValue],
+                                                 documentAttributes: nil )
+        
+        return attrString
+    }
+    
+    
    /// parse the json
    ///
    /// - Parameter dict: dictonary JSON

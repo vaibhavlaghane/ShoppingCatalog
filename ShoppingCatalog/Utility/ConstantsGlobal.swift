@@ -9,6 +9,8 @@
 import UIKit
 
 let kCatalogCellIdentifier = "kCatalogCell"
+let kshowProductDetailsdentifier = "showProductDetails"
 
+ 
 class ConstantsGlobal: NSObject {
 }

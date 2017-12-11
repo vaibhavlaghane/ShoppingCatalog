@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		646B6BD01FDDDA4C006EE13A /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646B6BCF1FDDDA4C006EE13A /* ProductDetailViewController.swift */; };
 		6487F3BB1FDCB9D7000ED35E /* ConstantsGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3BA1FDCB9D7000ED35E /* ConstantsGlobal.swift */; };
 		6487F3BF1FDCC1AF000ED35E /* NetworkOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3BE1FDCC1AF000ED35E /* NetworkOperationManager.swift */; };
 		6487F3C11FDCC665000ED35E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3C01FDCC665000ED35E /* ImageDownloader.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		646B6BCF1FDDDA4C006EE13A /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		6487F3BA1FDCB9D7000ED35E /* ConstantsGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsGlobal.swift; sourceTree = "<group>"; };
 		6487F3BE1FDCC1AF000ED35E /* NetworkOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperationManager.swift; sourceTree = "<group>"; };
 		6487F3C01FDCC665000ED35E /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				DC7888071FDC6B01009E4719 /* ViewController.swift */,
 				6487F3CF1FDDC1FC000ED35E /* CatalogTableViewController.swift */,
 				6487F3D11FDDC92A000ED35E /* ProductCell.swift */,
+				646B6BCF1FDDDA4C006EE13A /* ProductDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				6487F3C61FDCD63A000ED35E /* DataDownloader.swift in Sources */,
 				6487F3BF1FDCC1AF000ED35E /* NetworkOperationManager.swift in Sources */,
 				6487F3C91FDCDA59000ED35E /* Utility.swift in Sources */,
+				646B6BD01FDDDA4C006EE13A /* ProductDetailViewController.swift in Sources */,
 				6487F3C41FDCC6DA000ED35E /* Product.swift in Sources */,
 				6487F3BB1FDCB9D7000ED35E /* ConstantsGlobal.swift in Sources */,
 				6487F3C11FDCC665000ED35E /* ImageDownloader.swift in Sources */,

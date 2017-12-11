@@ -38,15 +38,15 @@ class Product: NSObject {
         }
     }
     
-     init(productId: String?
-        , productName: String?
-        , shortDescription: String?
-        , longDescription: String?
-        , price: String?
-        , imagelink: String?
-        , reviewRating: Int?
-        , reviewCount: Int?
-        , inStock: Bool?)
+     init(productId: String?,
+          productName: String?,
+          shortDescription: String?,
+          longDescription: String?,
+          price: String?,
+          imagelink: String?,
+          reviewRating: Int?,
+          reviewCount: Int?,
+          inStock: Bool?)
      {
         self.productId = productId ?? ""
         self.productName = productName ?? ""

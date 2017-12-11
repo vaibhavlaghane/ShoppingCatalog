@@ -17,11 +17,8 @@ class CatalogTableViewController: UITableViewController {
         super.viewDidLoad()
 
         netOp.downloadData(pageNumber: 1, pageSize: 20) { (products) in
-            //
             self.catalogList = self.netOp.products
-            
             DispatchQueue.main.async {
-                //
                 self.tableView.reloadData()
             }
         }
@@ -71,18 +68,27 @@ class CatalogTableViewController: UITableViewController {
         }
         cellP = ProductCell()
         return cellP!
-        
-        
     }
- 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            //selectedSprint = tableSprintNames[indexPath.row].sprintName
+            self.performSegue(withIdentifier: kshowProductDetailsdentifier, sender: indexPath);
+    }
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     MARK: - Navigation
+     In a storyboard-based application, you will often want to do a little preparation before navigation  */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == kshowProductDetailsdentifier{
+            let destViewController                  =   segue.destination as! ProductDetailViewController
+            let indexPath = sender as? IndexPath
+            destViewController.product           =   catalogList[(indexPath?.row)!]
+//            destViewController.projectName          =   projectName //  "Mobile
+        }
     }
-    */
+ 
+ 
 
 }
