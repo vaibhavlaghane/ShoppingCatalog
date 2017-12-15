@@ -16,23 +16,17 @@ import UIKit
 
 class CollectionViewController: UIViewController {
 
-    
-    
+    @IBOutlet weak var collectionView: UICollectionView!
+
     var productsList = [Product]()
     var product :Product? = nil
     var currentProduct: Product? = nil
-    var lastProduct : Product? = nil
-    var nextProductInLine : Product? = nil
-    var baseIndex = 0
-    var  isfirstTimeTransform = true
-    var currentIndex =  0, lastTargetOffsetx = 0
+ 
+    var currentIndex =  0//, lastTargetOffsetx = 0
     var selfViewWidth: CGFloat = 0
-    var cellWidth: CGFloat = 0
-    
-    
-    let contentCellIdentifier = "ContentCellIdentifier"
+    var initialIndex = false
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    let contentCellIdentifier = "ContentCellIdentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +35,9 @@ class CollectionViewController: UIViewController {
                                 forCellWithReuseIdentifier: contentCellIdentifier)
 
         selfViewWidth = self.view.frame.size.width
-    
+        let pIndex = productsList.index(of: product!)
+        currentIndex = pIndex!
     }
-    
-    
-    
-    
     
     /// method to swipe view and load new view based on the scroll
     ///
@@ -86,8 +77,6 @@ class CollectionViewController: UIViewController {
         scrollView.setContentOffset( CGPoint.init(x: CGFloat( newTargetOffset) , y: 0)   , animated: true)
         scrollView.setContentOffset( CGPoint.init(x: CGFloat( newTargetOffset) , y: 0)   , animated: true)
     }
-    
-
 
 }
 
@@ -123,6 +112,16 @@ extension CollectionViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
-extension CollectionViewController: UICollectionViewDelegate {
 
+// MARK: - UICollectionViewDelegate
+extension CollectionViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if( !initialIndex){
+            let indextoScrollTo = IndexPath(item: currentIndex, section: 0)
+            self.collectionView.scrollToItem(at: indextoScrollTo, at: .left, animated: false)
+            initialIndex = true
+        }
+    }
 }
+
