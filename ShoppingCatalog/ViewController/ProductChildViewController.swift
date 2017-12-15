@@ -12,6 +12,7 @@ class ProductChildViewController: UIViewController {
     
     public var product:Product?
     
+    @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet public weak var imageView: UIImageView!
     @IBOutlet public weak var shortDescriptionTxtView: UITextView!
     @IBOutlet public weak var longDescription: UITextView!
@@ -22,9 +23,9 @@ class ProductChildViewController: UIViewController {
         if let prd = product {
             self.shortDescriptionTxtView.attributedText =  Utility.descriptionHTMLConversion(htmlString:  (prd.shortDescription)! )
             self.longDescription.attributedText = Utility.descriptionHTMLConversion(htmlString: (prd.longDescription)! )
-            
-            //productLabel.text = prd.productName
-            
+            if (prd.productName != nil ){
+            productNameLabel.text = prd.productName
+            }
             if(prd.imageData != nil ){
                 self.imageView.image = prd.imageData
             }

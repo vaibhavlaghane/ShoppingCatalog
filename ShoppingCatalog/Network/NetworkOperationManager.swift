@@ -16,40 +16,30 @@ class PendingOperations {
         queue.maxConcurrentOperationCount = 1
         return queue
     }()
-    
-    //    lazy var filtrationsInProgress = [NSIndexPath:Operation]()
-    //    lazy var filtrationQueue:OperationQueue = {
-    //        var queue = OperationQueue()
-    //            queue.name = "Image Filtration queue"
-    //            queue.maxConcurrentOperationCount = 1
-    //            return queue
-    //        }()
-
 }
+
+/// network operations manager class
 class NetworkOperationManager: NSObject {
 
-    let downloader = DataDownloader()
-    var products = [Product]()
-    let pendingOperations = PendingOperations()
-   
-    func downloadData()->Void{
-        downloader.getJSONData(pageNumber: 1, pageSize: 30, completion: { (dict) in
-            self.products = Utility.parseJSON(dict: dict)
-            
-            for (index, element) in self.products.enumerated(){
-                self.startDownloadProductImage(product: element, index: index )
-            }
-        }) { (response, error) in   //
-            NSLog(error as! String)
-        }
-    }
- 
+    @objc dynamic var animals = [String]()
+    @objc dynamic var cars = [String]()
     
+    let downloader = DataDownloader()
+    @objc  public dynamic var products = [Product]()
+    let pendingOperations = PendingOperations()
+    
+ 
+    /// download JSON data for given page and size
+    ///
+    /// - Parameters:
+    ///   - pageNumber: page number
+    ///   - pageSize: size of page
+    ///   - completion: completion block 
     func downloadData( pageNumber: Int,pageSize: Int,  completion: @escaping ([Product]? ) -> Void )->Void{
         downloader.getJSONData(pageNumber: pageNumber, pageSize: pageSize, completion: { (dict) in
             
             let productList = Utility.parseJSON(dict: dict)
-            self.products.append(contentsOf:productList  )// = Utility.parseJSON(dict: dict)
+            self.products.append(contentsOf:productList  )
             
             completion(productList)
             
@@ -57,9 +47,22 @@ class NetworkOperationManager: NSObject {
                 self.startDownloadProductImage(product: element, index: index )
             }
         }) { (response, error) in   //
+            
+            Utility.showAlertMessage("Failed to Download the Content", withTitle: "Download Update", onClick: {
+                
+                NSLog(error as! String)
+            })
+                
             NSLog(error as! String)
         }
     }
+    
+    
+    /// starte image download operation
+    ///
+    /// - Parameters:
+    ///   - product: product
+    ///   - index: index of product 
     func startOperationsProduct(product: Product, index: Int){
         switch (product.isImageDownloaded) {
         case .New:
@@ -87,7 +90,6 @@ class NetworkOperationManager: NSObject {
             }
             DispatchQueue.main.async {
                 self.pendingOperations.downloadsInProgress.removeValue(forKey: index )
-               // self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }
         }
 

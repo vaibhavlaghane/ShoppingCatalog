@@ -11,10 +11,7 @@ import UIKit
 class ProductCell: UITableViewCell {
 
     @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var shortDescriptionTxt: UITextField!
-    @IBOutlet weak var shortDecription: UILabel!
-    
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,6 +30,6 @@ class ProductCell: UITableViewCell {
                                                            .characterEncoding: String.Encoding.utf8.rawValue],
                                                  documentAttributes: nil )
         
-        self.shortDescriptionTxt.attributedText = attrString
+        //self.shortDescriptionTxt.attributedText = attrString
      }
 }

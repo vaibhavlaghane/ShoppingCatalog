@@ -11,27 +11,42 @@ import UIKit
 class CatalogTableViewController: UITableViewController {
 
     var catalogList = [Product]()
-    var netOp = NetworkOperationManager()
-    
+    @objc var netOp = NetworkOperationManager()
+    var pageNumber = 1;
+    var pageSize = 30 ;
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        netOp.downloadData(pageNumber: 1, pageSize: 20) { (products) in
+     
+        netOp.downloadData(pageNumber: pageNumber, pageSize: pageSize) { (products) in
             self.catalogList = self.netOp.products
+            self.pageNumber = self.pageNumber + self.pageSize ;
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
         catalogList = netOp.products
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.estimatedRowHeight =   UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 55.0;
+        
+        tableView.addInfiniteScroll { (tableView) -> Void in
+            // update table view
+            
+            self.netOp.downloadData(pageNumber: self.pageNumber, pageSize: 20) { (products) in
+                self.catalogList = self.netOp.products
+                self.pageNumber = self.pageNumber + self.pageSize  ;
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    // finish infinite scroll animation
+                    tableView.finishInfiniteScroll()
+                }
+            }
+        
+        }
+        
+        tableView.finishInfiniteScroll()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,11 +72,8 @@ class CatalogTableViewController: UITableViewController {
        
         // Configure the cell...
             if (indexPath.row < catalogList.count){
-                let prd = catalogList[indexPath.row]
-               // cell.priceLabel.text = prd.price
+                let prd = catalogList[indexPath.row] 
                 cell.productNameLabel.text = prd.productName
-                //cell.shortDescriptionTxt.text  = prd.shortDescription
-                //cell.descriptionHTMLConversion(htmlString: prd.shortDescription ?? "")
             }
         return cell
             
@@ -71,25 +83,32 @@ class CatalogTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            //selectedSprint = tableSprintNames[indexPath.row].sprintName
-            self.performSegue(withIdentifier: kshowProductDetailsdentifier, sender: indexPath);
+        self.performSegue(withIdentifier: kshowCollectionViewdentifier, sender: indexPath);
     }
     
     /*
      MARK: - Navigation
      In a storyboard-based application, you will often want to do a little preparation before navigation  */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == kshowProductDetailsdentifier{
-            let destViewController                  =   segue.destination as! ProductDetailViewController
+ 
+ 
+        
+        
+        if (segue.identifier == kshowCollectionViewdentifier){
+            
+            let destViewController                  =   segue.destination as! CollectionViewController
             let indexPath = sender as? IndexPath
             destViewController.product           =   catalogList[(indexPath?.row)!]
             destViewController.productsList = catalogList
-//            destViewController.projectName          =   projectName //  "Mobile
+            
+             
+            
         }
     }
  
  
+    deinit {
+        removeObserver(self, forKeyPath: "products")
+    }
 
 }

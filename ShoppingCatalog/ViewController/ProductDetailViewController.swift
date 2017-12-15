@@ -9,9 +9,6 @@
 import UIKit
 
 class ProductDetailViewController: UIViewController {
-    @IBOutlet var viewPortrait: UIView!
-    @IBOutlet var viewLandscape: UIView!
-    
     
     @IBOutlet var leftGestureRecognizer: UISwipeGestureRecognizer!
     @IBOutlet var rightSwipeGestureRecognizer: UISwipeGestureRecognizer!
@@ -29,9 +26,7 @@ class ProductDetailViewController: UIViewController {
    
     
     @IBAction func swipeLeftCalled(_ sender: Any) {
-        print("swipeLeftCalled")
-        
-        let bundle = Bundle.main
+      
         let vc = ProductChildViewController(nibName: kProductChildViewControllerNibName, bundle: nil )
         if  let currentIndex = productsList.index(of: currentProduct!){
             if currentIndex + 1 < productsList.count{
@@ -46,6 +41,8 @@ class ProductDetailViewController: UIViewController {
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromRight
         self.view.layer.add(transition, forKey: nil)
+        let  ct:CGRect = vc.view.frame
+        print("ct", ct );
         self.view.addSubview(vc.view)
         
     }
@@ -58,7 +55,7 @@ class ProductDetailViewController: UIViewController {
         if  let currentIndex = productsList.index(of: currentProduct!){
             if currentIndex > 0{
                 nextProductInLine = productsList[ currentIndex - 1 ]
-                vc.product = nextProductInLine//productsList[ currentIndex - 1 ]
+                vc.product = nextProductInLine
                 currentProduct = nextProductInLine
                 
             }
@@ -70,20 +67,11 @@ class ProductDetailViewController: UIViewController {
         self.view.layer.add(transition, forKey: nil)
         self.view.addSubview(vc.view)
         
-        print("swipeRightCalled")
     }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-        // create an NSData object from myView
-        let archive = NSKeyedArchiver.archivedData(withRootObject: selfView ?? UIView() )
-        // create a clone by unarchiving the NSData
-        let selfViewCopy = NSKeyedUnarchiver.unarchiveObject(with: archive) as! UIView
-        
+  
         if let prd = product {
             currentProduct = prd
             

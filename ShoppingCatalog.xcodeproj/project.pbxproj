@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		646B6BD01FDDDA4C006EE13A /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646B6BCF1FDDDA4C006EE13A /* ProductDetailViewController.swift */; };
+		644194951FE3A2CD0098A425 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644194921FE3A2CD0098A425 /* ContentCollectionViewCell.swift */; };
+		644194961FE3A2CD0098A425 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644194931FE3A2CD0098A425 /* CollectionViewController.swift */; };
+		644194971FE3A2CD0098A425 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644194941FE3A2CD0098A425 /* CustomCollectionViewLayout.swift */; };
+		644194991FE3A47C0098A425 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644194981FE3A47C0098A425 /* ContentCollectionViewCell.xib */; };
+		644D01581FE0E14700604103 /* UIScrollView+InfiniteScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 644D01571FE0E14700604103 /* UIScrollView+InfiniteScroll.m */; };
 		6487F3BB1FDCB9D7000ED35E /* ConstantsGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3BA1FDCB9D7000ED35E /* ConstantsGlobal.swift */; };
 		6487F3BF1FDCC1AF000ED35E /* NetworkOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3BE1FDCC1AF000ED35E /* NetworkOperationManager.swift */; };
 		6487F3C11FDCC665000ED35E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3C01FDCC665000ED35E /* ImageDownloader.swift */; };
@@ -17,13 +21,7 @@
 		6487F3CC1FDDBF17000ED35E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6487F3CA1FDDBF17000ED35E /* Main.storyboard */; };
 		6487F3D01FDDC1FC000ED35E /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3CF1FDDC1FC000ED35E /* CatalogTableViewController.swift */; };
 		6487F3D21FDDC92A000ED35E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487F3D11FDDC92A000ED35E /* ProductCell.swift */; };
-		64DC938C1FDE14DC00EBBA7E /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC938B1FDE14DC00EBBA7E /* ProductDetailView.swift */; };
-		64DC938F1FDE183100EBBA7E /* ProductChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC938D1FDE183100EBBA7E /* ProductChildViewController.swift */; };
-		64DC93901FDE183100EBBA7E /* ProductChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64DC938E1FDE183100EBBA7E /* ProductChildViewController.xib */; };
 		DC7888061FDC6B01009E4719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7888051FDC6B01009E4719 /* AppDelegate.swift */; };
-		DC7888081FDC6B01009E4719 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7888071FDC6B01009E4719 /* ViewController.swift */; };
-		DC78880B1FDC6B01009E4719 /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7888091FDC6B01009E4719 /* Main2.storyboard */; };
-		DC78880E1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC78880C1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodeld */; };
 		DC7888101FDC6B01009E4719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC78880F1FDC6B01009E4719 /* Assets.xcassets */; };
 		DC7888131FDC6B01009E4719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7888111FDC6B01009E4719 /* LaunchScreen.storyboard */; };
 		DC78881E1FDC6B01009E4719 /* ShoppingCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78881D1FDC6B01009E4719 /* ShoppingCatalogTests.swift */; };
@@ -47,8 +45,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		64E144C71FE0D66F004CAAAE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		646B6BCF1FDDDA4C006EE13A /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		644194921FE3A2CD0098A425 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		644194931FE3A2CD0098A425 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		644194941FE3A2CD0098A425 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		644194981FE3A47C0098A425 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		644D01561FE0E14700604103 /* UIScrollView+InfiniteScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+InfiniteScroll.h"; sourceTree = "<group>"; };
+		644D01571FE0E14700604103 /* UIScrollView+InfiniteScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+InfiniteScroll.m"; sourceTree = "<group>"; };
 		6487F3BA1FDCB9D7000ED35E /* ConstantsGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsGlobal.swift; sourceTree = "<group>"; };
 		6487F3BE1FDCC1AF000ED35E /* NetworkOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperationManager.swift; sourceTree = "<group>"; };
 		6487F3C01FDCC665000ED35E /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
@@ -58,14 +74,9 @@
 		6487F3CB1FDDBF17000ED35E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6487F3CF1FDDC1FC000ED35E /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 		6487F3D11FDDC92A000ED35E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
-		64DC938B1FDE14DC00EBBA7E /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
-		64DC938D1FDE183100EBBA7E /* ProductChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductChildViewController.swift; sourceTree = "<group>"; };
-		64DC938E1FDE183100EBBA7E /* ProductChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductChildViewController.xib; sourceTree = "<group>"; };
+		64E144C31FE0D50D004CAAAE /* ShoppingCatalog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShoppingCatalog-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC7888021FDC6B01009E4719 /* ShoppingCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7888051FDC6B01009E4719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC7888071FDC6B01009E4719 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC78880A1FDC6B01009E4719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
-		DC78880D1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingCatalog.xcdatamodel; sourceTree = "<group>"; };
 		DC78880F1FDC6B01009E4719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC7888121FDC6B01009E4719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC7888141FDC6B01009E4719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +113,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AD79165F8078B3794047722 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		644194911FE3A2B10098A425 /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				644194931FE3A2CD0098A425 /* CollectionViewController.swift */,
+				644194921FE3A2CD0098A425 /* ContentCollectionViewCell.swift */,
+				644194941FE3A2CD0098A425 /* CustomCollectionViewLayout.swift */,
+				644194981FE3A47C0098A425 /* ContentCollectionViewCell.xib */,
+			);
+			path = collectionView;
+			sourceTree = "<group>";
+		};
+		644D01551FE0E14700604103 /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				644D01561FE0E14700604103 /* UIScrollView+InfiniteScroll.h */,
+				644D01571FE0E14700604103 /* UIScrollView+InfiniteScroll.m */,
+			);
+			path = Scroll;
+			sourceTree = "<group>";
+		};
+		644D01601FE20EC900604103 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				644D01551FE0E14700604103 /* Scroll */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		644D01611FE2276B00604103 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				6487F3D11FDDC92A000ED35E /* ProductCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		6487F3B71FDCB99E000ED35E /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,9 +186,7 @@
 		6487F3CD1FDDC108000ED35E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DC78880C1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodeld */,
 				6487F3CA1FDDBF17000ED35E /* Main.storyboard */,
-				DC7888091FDC6B01009E4719 /* Main2.storyboard */,
 				DC78880F1FDC6B01009E4719 /* Assets.xcassets */,
 				DC7888111FDC6B01009E4719 /* LaunchScreen.storyboard */,
 				DC7888141FDC6B01009E4719 /* Info.plist */,
@@ -142,27 +194,34 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		6487F3CE1FDDC1AB000ED35E /* View */ = {
+		6487F3CE1FDDC1AB000ED35E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DC7888071FDC6B01009E4719 /* ViewController.swift */,
+				644194911FE3A2B10098A425 /* collectionView */,
+				644D01611FE2276B00604103 /* cells */,
 				6487F3CF1FDDC1FC000ED35E /* CatalogTableViewController.swift */,
-				6487F3D11FDDC92A000ED35E /* ProductCell.swift */,
-				646B6BCF1FDDDA4C006EE13A /* ProductDetailViewController.swift */,
-				64DC938B1FDE14DC00EBBA7E /* ProductDetailView.swift */,
-				64DC938D1FDE183100EBBA7E /* ProductChildViewController.swift */,
-				64DC938E1FDE183100EBBA7E /* ProductChildViewController.xib */,
 			);
-			path = View;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BA90D24554FA91554C320A10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DC7887F91FDC6B01009E4719 = {
 			isa = PBXGroup;
 			children = (
+				64E144C31FE0D50D004CAAAE /* ShoppingCatalog-Bridging-Header.h */,
 				DC7888041FDC6B01009E4719 /* ShoppingCatalog */,
+				644D01601FE20EC900604103 /* ThirdParty */,
 				DC78881C1FDC6B01009E4719 /* ShoppingCatalogTests */,
 				DC7888271FDC6B01009E4719 /* ShoppingCatalogUITests */,
 				DC7888031FDC6B01009E4719 /* Products */,
+				4AD79165F8078B3794047722 /* Pods */,
+				BA90D24554FA91554C320A10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				DC7888051FDC6B01009E4719 /* AppDelegate.swift */,
-				6487F3CE1FDDC1AB000ED35E /* View */,
+				6487F3CE1FDDC1AB000ED35E /* ViewController */,
 				6487F3CD1FDDC108000ED35E /* Resources */,
 				6487F3C71FDCDA4A000ED35E /* Utility */,
 				6487F3C21FDCC6B0000ED35E /* Model */,
@@ -214,9 +273,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC78882D1FDC6B01009E4719 /* Build configuration list for PBXNativeTarget "ShoppingCatalog" */;
 			buildPhases = (
+				39E10151A348EC49C2C3C9A3 /* [CP] Check Pods Manifest.lock */,
 				DC7887FE1FDC6B01009E4719 /* Sources */,
 				DC7887FF1FDC6B01009E4719 /* Frameworks */,
 				DC7888001FDC6B01009E4719 /* Resources */,
+				F11D0F36A8D5D3443BC05612 /* [CP] Embed Pods Frameworks */,
+				6EC130FE4E8F74E4B1BC0474 /* [CP] Copy Pods Resources */,
+				64E144C71FE0D66F004CAAAE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +294,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC7888301FDC6B01009E4719 /* Build configuration list for PBXNativeTarget "ShoppingCatalogTests" */;
 			buildPhases = (
+				6C9DDCA8EA95C51DF26520B5 /* [CP] Check Pods Manifest.lock */,
 				DC7888151FDC6B01009E4719 /* Sources */,
 				DC7888161FDC6B01009E4719 /* Frameworks */,
 				DC7888171FDC6B01009E4719 /* Resources */,
+				ED466C6E3DAE3794BB4566D2 /* [CP] Embed Pods Frameworks */,
+				0ECB7CE7AAD55751C941ABCD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,9 +315,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC7888331FDC6B01009E4719 /* Build configuration list for PBXNativeTarget "ShoppingCatalogUITests" */;
 			buildPhases = (
+				A4F96D374879EFD988003249 /* [CP] Check Pods Manifest.lock */,
 				DC7888201FDC6B01009E4719 /* Sources */,
 				DC7888211FDC6B01009E4719 /* Frameworks */,
 				DC7888221FDC6B01009E4719 /* Resources */,
+				675A9C73998778079C91B785 /* [CP] Embed Pods Frameworks */,
+				15F2086DDF99E9CBA9307B68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,9 +385,8 @@
 			files = (
 				DC7888131FDC6B01009E4719 /* LaunchScreen.storyboard in Resources */,
 				DC7888101FDC6B01009E4719 /* Assets.xcassets in Resources */,
-				DC78880B1FDC6B01009E4719 /* Main2.storyboard in Resources */,
 				6487F3CC1FDDBF17000ED35E /* Main.storyboard in Resources */,
-				64DC93901FDE183100EBBA7E /* ProductChildViewController.xib in Resources */,
+				644194991FE3A47C0098A425 /* ContentCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +406,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ECB7CE7AAD55751C941ABCD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingCatalogTests/Pods-ShoppingCatalogTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15F2086DDF99E9CBA9307B68 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingCatalogUITests/Pods-ShoppingCatalogUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39E10151A348EC49C2C3C9A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShoppingCatalog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#////diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\n#////if [ $? != 0 ] ; then\n#  //  # print error to STDERR\n#   // //echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n#////  exit 1\n#////fi\n#//# This output is used by Xcode 'outputs' to avoid re-running this script phase.\n#//echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		675A9C73998778079C91B785 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingCatalogUITests/Pods-ShoppingCatalogUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C9DDCA8EA95C51DF26520B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShoppingCatalogTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\n#if [ $? != 0 ] ; then\n    # print error to STDERR\n#    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n# exit 1\n#fi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\n#echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EC130FE4E8F74E4B1BC0474 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#//\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingCatalog/Pods-ShoppingCatalog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4F96D374879EFD988003249 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShoppingCatalogUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED466C6E3DAE3794BB4566D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingCatalogTests/Pods-ShoppingCatalogTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIScrollView_InfiniteScroll.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingCatalogTests/Pods-ShoppingCatalogTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F11D0F36A8D5D3443BC05612 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#//\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingCatalog/Pods-ShoppingCatalog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC7887FE1FDC6B01009E4719 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -347,16 +565,15 @@
 				6487F3D21FDDC92A000ED35E /* ProductCell.swift in Sources */,
 				6487F3C61FDCD63A000ED35E /* DataDownloader.swift in Sources */,
 				6487F3BF1FDCC1AF000ED35E /* NetworkOperationManager.swift in Sources */,
+				644194961FE3A2CD0098A425 /* CollectionViewController.swift in Sources */,
 				6487F3C91FDCDA59000ED35E /* Utility.swift in Sources */,
-				646B6BD01FDDDA4C006EE13A /* ProductDetailViewController.swift in Sources */,
 				6487F3C41FDCC6DA000ED35E /* Product.swift in Sources */,
 				6487F3BB1FDCB9D7000ED35E /* ConstantsGlobal.swift in Sources */,
 				6487F3C11FDCC665000ED35E /* ImageDownloader.swift in Sources */,
-				DC7888081FDC6B01009E4719 /* ViewController.swift in Sources */,
-				64DC938C1FDE14DC00EBBA7E /* ProductDetailView.swift in Sources */,
+				644D01581FE0E14700604103 /* UIScrollView+InfiniteScroll.m in Sources */,
 				DC7888061FDC6B01009E4719 /* AppDelegate.swift in Sources */,
-				64DC938F1FDE183100EBBA7E /* ProductChildViewController.swift in Sources */,
-				DC78880E1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodeld in Sources */,
+				644194951FE3A2CD0098A425 /* ContentCollectionViewCell.swift in Sources */,
+				644194971FE3A2CD0098A425 /* CustomCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,14 +615,6 @@
 				6487F3CB1FDDBF17000ED35E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DC7888091FDC6B01009E4719 /* Main2.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC78880A1FDC6B01009E4719 /* Base */,
-			);
-			name = Main2.storyboard;
 			sourceTree = "<group>";
 		};
 		DC7888111FDC6B01009E4719 /* LaunchScreen.storyboard */ = {
@@ -453,6 +662,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -467,12 +680,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShoppingCatalog-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "ShoppingCatalog-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -510,6 +732,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -518,10 +744,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShoppingCatalog-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "ShoppingCatalog-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -531,10 +766,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/ShoppingCatalog/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "";
+				PODS_PODFILE_DIR_PATH = "";
+				PODS_ROOT = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Com.SClub.ShoppingCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShoppingCatalog-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -545,10 +788,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/ShoppingCatalog/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "";
+				PODS_PODFILE_DIR_PATH = "";
+				PODS_ROOT = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Com.SClub.ShoppingCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShoppingCatalog-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -656,19 +907,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DC78880C1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DC78880D1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodel */,
-			);
-			currentVersion = DC78880D1FDC6B01009E4719 /* ShoppingCatalog.xcdatamodel */;
-			path = ShoppingCatalog.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DC7887FA1FDC6B01009E4719 /* Project object */;
 }

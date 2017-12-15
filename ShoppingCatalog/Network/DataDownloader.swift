@@ -43,7 +43,7 @@ class DataDownloader: NSObject {
             {
                 do{
                     let json = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions.allowFragments)
-                    print(json)
+                    //print(json)
                     completion(json as? Dictionary<String, Any >)
                 }catch{
                     print("Could not serialize")
@@ -53,11 +53,10 @@ class DataDownloader: NSObject {
             }.resume()
     }
 
-    /// auxiliary function to create URL using the paramenters
-    ///e.g.   //https://walmartlabs-test.appspot.com/_ah/api/walmart/v1/walmartproducts/apiKey/1/1
+    ///  function to create URL using the paramenters
     /// - Parameters:
-    ///   - pageSize: <#pageSize description#>
-    ///   - pageNumber: <#pageNumber description#>
+    ///   - pageSize: page size
+    ///   - pageNumber: page number 
     /// - Returns: url
     internal func createURLFromParameters(_ pageSize:  String, _ pageNumber: String ) -> URL {
         
