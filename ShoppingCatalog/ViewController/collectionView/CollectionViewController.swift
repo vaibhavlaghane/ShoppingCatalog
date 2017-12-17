@@ -67,8 +67,7 @@ class CollectionViewController: UIViewController {
 
         toffset.x = currentOffset;
         scrollView.setContentOffset( CGPoint.init(x: CGFloat( newTargetOffset) , y: 0)   , animated: true)
-        scrollView.setContentOffset( CGPoint.init(x: CGFloat( newTargetOffset) , y: 0)   , animated: true)
-        scrollView.setContentOffset( CGPoint.init(x: CGFloat( newTargetOffset) , y: 0)   , animated: true)
+        
     }
 
 }
