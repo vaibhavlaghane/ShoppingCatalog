@@ -90,19 +90,14 @@ class CatalogTableViewController: UITableViewController {
      MARK: - Navigation
      In a storyboard-based application, you will often want to do a little preparation before navigation  */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- 
- 
-        
-        
+
         if (segue.identifier == kshowCollectionViewdentifier){
             
             let destViewController                  =   segue.destination as! CollectionViewController
             let indexPath = sender as? IndexPath
             destViewController.product           =   catalogList[(indexPath?.row)!]
             destViewController.productsList = catalogList
-            
-             
-            
+
         }
     }
  

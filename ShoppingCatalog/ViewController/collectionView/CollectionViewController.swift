@@ -14,6 +14,8 @@
 
 import UIKit
 
+let contentCellIdentifier = "ContentCellIdentifier"
+
 class CollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -22,11 +24,9 @@ class CollectionViewController: UIViewController {
     var product :Product? = nil
     var currentProduct: Product? = nil
  
-    var currentIndex =  0//, lastTargetOffsetx = 0
+    var currentIndex =  0
     var selfViewWidth: CGFloat = 0
     var initialIndex = false
-
-    let contentCellIdentifier = "ContentCellIdentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +54,8 @@ class CollectionViewController: UIViewController {
         var  newTargetOffset = 0;
         
         if (targetOffset > currentOffset){
-            //print("  currentOffset)   \(currentOffset)  pageWidth === \(pageWidth )" )
             newTargetOffset = Int(ceilf( Float(CGFloat( currentOffset) / (pageWidth  ) )) * Float(pageWidth));
         }else{
-            //print("( currentOffset)  \( currentOffset)   pageWidth === \( pageWidth )" )
             newTargetOffset = Int(floorf(Float(currentOffset / (pageWidth   ) )) * Float(pageWidth));
         }
         
@@ -66,12 +64,7 @@ class CollectionViewController: UIViewController {
         }else if ( CGFloat( newTargetOffset)  > scrollView.contentSize.width){
             newTargetOffset = Int(scrollView.contentSize.width);
         }
-        
-        //print("newTargetOffset -\(newTargetOffset) toffset.x \(toffset.x)  currentIndex \(currentIndex)")
-        
-        if (newTargetOffset == 0    && toffset.x == 0) {
-            self.navigationController?.popToRootViewController(animated: true)
-        }
+
         toffset.x = currentOffset;
         scrollView.setContentOffset( CGPoint.init(x: CGFloat( newTargetOffset) , y: 0)   , animated: true)
         scrollView.setContentOffset( CGPoint.init(x: CGFloat( newTargetOffset) , y: 0)   , animated: true)
@@ -110,8 +103,6 @@ extension CollectionViewController: UICollectionViewDataSource {
     }
 
 }
-
-// MARK: - UICollectionViewDelegate
 
 // MARK: - UICollectionViewDelegate
 extension CollectionViewController: UICollectionViewDelegate {

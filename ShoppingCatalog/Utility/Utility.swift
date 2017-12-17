@@ -30,19 +30,10 @@ class Utility: NSObject {
    ///
    /// - Parameter dict: dictonary JSON
    /// - Returns: array of Product
-   static func parseJSON(dict: Dictionary<String, Any>?)-> [Product] {
-       // self.setupLoadingIndicator(start: false)
+   static func parseJSON(dict: Dictionary<String, Any>?)-> [Product] { 
         guard let jsonDict   = dict  else{return [] }
-        //guard let idArr = jsonDict["id"]  else {return}
         guard let prodArr = jsonDict["products"] as? Array<Any?> else {return  [] }
-        
-//        let totalProducts     = jsonDict["totalProducts"]
-//        let pageNumber     = jsonDict["pageNumber"]
-//        let pageSize     = jsonDict["pageSize"]
-//        let status     = jsonDict["status"]
-//        let kind     = jsonDict["kind"]
-//        let etag     = jsonDict["etag"]
-//
+ 
         var products = [Product]()
         
         for (_,element) in prodArr.enumerated(){

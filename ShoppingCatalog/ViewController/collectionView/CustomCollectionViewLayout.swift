@@ -10,7 +10,7 @@ import UIKit
 
 class CustomCollectionViewLayout: UICollectionViewLayout {
 
-    var  numberOfColumns =  8
+    var  numberOfColumns =  1
  
     var itemAttributes = [[UICollectionViewLayoutAttributes]]()
     var itemsSize = [CGSize]()
@@ -146,8 +146,8 @@ extension CustomCollectionViewLayout {
     func sizeForItemWithColumnIndex(_ columnIndex: Int) -> CGSize {
        
         
-        let width =  (containerCollectionView?.frame.size.width)!//.  320.0
-        let height = (containerCollectionView?.frame.size.height)!//504.0
+        let width =  (containerCollectionView?.frame.size.width)!
+        let height = (containerCollectionView?.frame.size.height)!
         return CGSize(width: width, height: height)
     }
 

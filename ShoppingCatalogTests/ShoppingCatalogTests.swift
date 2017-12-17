@@ -83,10 +83,7 @@ class ShoppingCatalogTests: XCTestCase {
         self.waitForExpectations(timeout: 5.0, handler: nil)
     }
     
-    func testGetImage(){
-       // netOps?.startDownloadProductImage(product: self.product![0], index: 1)
-        
-    }
+  
     
     func testimageDownloader(){
         var imageData: Data? = nil

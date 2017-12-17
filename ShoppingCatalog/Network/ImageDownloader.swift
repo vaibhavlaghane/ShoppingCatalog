@@ -14,9 +14,7 @@ class ImageDownloader: Operation {
     var  imageData: Data? = nil
     
     init(product: Product) {
-        self.product = product
-        //print("imageURL " , self.product.imagelink ?? "")
-        //print("imageURL " , self.product.imageURL?.absoluteString ?? "")
+        self.product = product 
     }
     
     override func main() {
